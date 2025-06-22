@@ -82,7 +82,7 @@ To join a node in a network from a token, without starting the vpn:
 ```golang
 
 import (
-    node "github.com/mudler/netron/pkg/node"
+    node "github.com/t-kawata/netron/pkg/node"
 )
 
 e := node.New(
@@ -102,8 +102,8 @@ or to start a VPN:
 ```golang
 
 import (
-    vpn "github.com/mudler/netron/pkg/vpn"
-    node "github.com/mudler/netron/pkg/node"
+    vpn "github.com/t-kawata/netron/pkg/vpn"
+    node "github.com/t-kawata/netron/pkg/node"
 )
 
 opts, err := vpn.Register(vpnOpts...)

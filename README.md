@@ -52,30 +52,6 @@ $ NETRONTOKEN=.. netron --address 10.1.0.13/24
 
 *Note*: It might take up time to build the connection between nodes. Wait at least 5 mins, it depends on the network behind the hosts.
 
-
-# Is it for me?
-
-Netron makes VPN decentralization a first strong requirement.
-
-Its main use is for edge and low-end devices and especially for development.
-
-The decentralized approach has few cons:
-
-- The underlying network is chatty. It uses a Gossip protocol for synchronizing the routing table and p2p. Every blockchain message is broadcasted to all peers, while the traffic is to the host only.
-- Might be not suited for low latency workload.
-
-Keep that in mind before using it for your prod networks!
-
-But it has a strong pro: it just works everywhere libp2p works!
-
-# Why?
-
-First of all it's my first experiment with libp2p. Second, I always wanted a more "open" `ngrok` alternative, but I always prefer to have "less infra" as possible to maintain. That's why building something like this on top of `libp2p` makes sense.
-
-# Warning!
-
-I'm not a security expert, and this software didn't went through a full security audit, so don't use and rely on it for sensible traffic and not even for production environment! I did this mostly for fun while I was experimenting with libp2p.
-
 ## Example use case: network-decentralized [k3s](https://github.com/k3s-io/k3s) test cluster
 
 Let's see a practical example, you are developing something for kubernetes and you want to try a multi-node setup, but you have machines available that are only behind NAT (pity!) and you would really like to leverage HW.
@@ -97,7 +73,7 @@ If you are not really interested in network performance (again, that's for devel
 We have used flannel here, but other CNI should work as well.
 
 
-# As a library
+## As a library
 
 Netron can be used as a library. It is very portable and offers a functional interface.
 
